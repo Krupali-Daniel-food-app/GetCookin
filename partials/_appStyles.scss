@@ -1,0 +1,76 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 7rem;
+}
+
+form {
+    background-image: url(../styles/assets/appimage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    
+}
+
+.flexRow {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+input {
+    width: 90%;
+    padding: 0.9rem;
+    border: 2px solid crimson;
+}
+
+input:focus{
+    transform: translateY(-2px);
+    transition: transform 150ms;
+    box-shadow: 0 3px 3px 0 crimson;
+}
+
+.formText {
+    width: 80%;
+}
+
+input[type="text"]::placeholder {
+    letter-spacing: 0.2em;
+}
+
+.recipeContainer {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: red;
+}
+
+.recipeCard {
+    width: 32%;
+    background-color: #e5dada;
+    margin-bottom: 20px;
+    color: #4a473e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.recipeImg,
+.recipeText {
+    width: 40%;
+}
+
+h4 {
+    font-family: 'Acme', sans-serif;
+    word-spacing: 0.3em;
+    color: #4a473e;
+}
+

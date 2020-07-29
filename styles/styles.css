@@ -26,8 +26,7 @@ figure {
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -45,8 +44,7 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 b, strong {
@@ -140,8 +138,7 @@ fieldset {
 }
 
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -159,8 +156,7 @@ textarea {
 }
 
 [type=checkbox], [type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 
@@ -203,21 +199,186 @@ template {
 }
 
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-html {
-  font-size: 62.5%;
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .wrapper {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.backgroundImage {
+  background-image: url(../styles/assets/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.flexColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 90rem;
+  padding: 2rem;
+  height: 80vh;
+}
+
+h1 {
+  font-family: 'Acme', sans-serif;
+  font-size: 6rem;
+  word-spacing: 0.3em;
+  color: #4a473e;
+}
+
+.flexColumn h1 {
+  margin-bottom: 0;
+}
+
+.flexColumn p {
+  margin-bottom: 5rem;
+}
+
+p {
+  font-family: 'Patrick Hand', sans-serif;
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #774963;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5dada;
+  color: #2b9348;
+  height: 20vh;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #2b9348;
+}
+
+.footer {
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+}
+
+.button {
+  text-decoration: none;
+  padding: 1rem 1rem;
+  border: 2px solid #4a473e;
+  background-color: #e5dada;
+  color: #2b9348;
+  width: 15rem;
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+  font-size: 2rem;
+  word-spacing: 0.3em;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: transform 150ms;
+  box-shadow: 0 3px 3px 0 #2b9348;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 7rem;
+}
+
+form {
+  background-image: url(../styles/assets/appimage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+}
+
+.flexRow {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  width: 50%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+input {
+  width: 90%;
+  padding: 0.9rem;
+  border: 2px solid crimson;
+}
+
+input:focus {
+  transform: translateY(-2px);
+  transition: transform 150ms;
+  box-shadow: 0 3px 3px 0 crimson;
+}
+
+.formText {
+  width: 80%;
+}
+
+input[type="text"]::placeholder {
+  letter-spacing: 0.2em;
+}
+
+.recipeContainer {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: red;
+}
+
+.recipeCard {
+  width: 32%;
+  background-color: #e5dada;
+  margin-bottom: 20px;
+  color: #4a473e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recipeImg,
+.recipeText {
+  width: 40%;
+}
+
+h4 {
+  font-family: 'Acme', sans-serif;
+  word-spacing: 0.3em;
+  color: #4a473e;
 }
