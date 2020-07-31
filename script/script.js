@@ -8,7 +8,9 @@ recipeApp.getRecipes = function(query) {
         method: 'GET',
         dataType: 'json',
         data: {
-            q: query
+            q: query,
+            from: 0,
+            to: 6
         }
 
     }).then(function(result) {
@@ -21,14 +23,14 @@ recipeApp.getRecipes = function(query) {
 recipeApp.displayRecipes = function(data){
     data.forEach(function(food){
         const recipeHtml = `
-        <div class"recipeCard">
-            <div class"recipeImg">
+        <div class="recipeCard">
+            <div class="recipeImg">
                 <img src="${food.recipe.image}">
             </div>
             <div class="recipeText">
-                <p>${food.recipe.label}</p>
-                <p>Calories: ${Math.round(food.recipe.calories)}</p>
-                <p>${food.recipe.url}"</p>
+                <a class="recipeLink" href="${food.recipe.url}">${food.recipe.label}</a>
+                <p class="recipeContent" >Calories: ${Math.round(food.recipe.calories)} kcal</p>
+                <p class="recipeContent">Serves: ${food.recipe.yield}</p>
             </div>
         </div>`
 

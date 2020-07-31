@@ -72,7 +72,7 @@ input[type="submit"]:hover {
     box-shadow: 0 3px 3px 0 #2b9348;
 }
 
-.recipeContainer {
+.result {
     width: 100%;
     padding: 20px 0;
     display: flex;
@@ -82,12 +82,14 @@ input[type="submit"]:hover {
 }
 
 .recipeCard {
-    width: 32%;
-    background-color: #e5dada;
-    margin-bottom: 20px;
+    width: calc((100% / 2) - 20px);
+    background-color: #fcd5ce;
+    margin-top: 20px;
+    padding: 3rem 3rem;
     color: #4a473e;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -96,9 +98,25 @@ input[type="submit"]:hover {
     width: 40%;
 }
 
+
 h4 {
     font-family: 'Acme', sans-serif;
     word-spacing: 0.3em;
     color: #4a473e;
 }
 
+.recipeLink {
+    text-decoration: none;
+    font-family: 'Acme', sans-serif;
+    font-size: 3rem;
+    color: #4a473e;
+}
+
+.recipeContent {
+    font-size: 2rem;
+    color: palevioletred;
+}
+
+.recipeSection {
+    background-color: whitesmoke;
+}
