@@ -362,12 +362,16 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 50%;
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -391,23 +395,58 @@ input:focus {
 }
 
 .formText {
-  width: 80%;
+  width: 100%;
 }
 
 input[type="text"]::-webkit-input-placeholder {
   letter-spacing: 0.2em;
+  font-size: 1.2rem;
 }
 
 input[type="text"]:-ms-input-placeholder {
   letter-spacing: 0.2em;
+  font-size: 1.2rem;
 }
 
 input[type="text"]::-ms-input-placeholder {
   letter-spacing: 0.2em;
+  font-size: 1.2rem;
 }
 
 input[type="text"]::placeholder {
   letter-spacing: 0.2em;
+  font-size: 1.2rem;
+}
+
+input[type="text"] {
+  padding: 1.3rem;
+  width: 100%;
+}
+
+input[type="submit"] {
+  margin-top: 3rem;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  border: 2px solid #4a473e;
+  background-color: #e5dada;
+  color: #2b9348;
+  width: 15rem;
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+  font-size: 2rem;
+  word-spacing: 0.3em;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: -webkit-transform 150ms;
+  transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  transition: transform 150ms, -webkit-transform 150ms;
+  -webkit-box-shadow: 0 3px 3px 0 #2b9348;
+          box-shadow: 0 3px 3px 0 #2b9348;
 }
 
 .recipeContainer {
@@ -421,7 +460,6 @@ input[type="text"]::placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: red;
 }
 
 .recipeCard {

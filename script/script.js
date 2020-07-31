@@ -23,7 +23,12 @@ recipeApp.displayRecipes = function(data){
         const recipeHtml = `
         <div class"recipeCard">
             <div class"recipeImg">
+                <img src="${food.recipe.image}">
+            </div>
+            <div class="recipeText">
                 <p>${food.recipe.label}</p>
+                <p>Calories: ${Math.round(food.recipe.calories)}</p>
+                <p>${food.recipe.url}"</p>
             </div>
         </div>`
 
@@ -33,10 +38,8 @@ recipeApp.displayRecipes = function(data){
 
 $('form').on('submit', function(e){
     e.preventDefault();
-    const selection1 = $('.firstIngredient').val();
-    const selection2 = $('.secondIngredient').val();
-    const selection3 = $('.thirdIngredient').val();
-    recipeApp.getRecipes(selection1, selection2, selection3);
+    const selection = $('input').val();
+    recipeApp.getRecipes(selection);
 })
 
 recipeApp.init = function() {
@@ -48,43 +51,6 @@ $(function(){
 })
 
 
-// recipeApp.getRecipes();
-// const image = result.recipe.image;
-// const title = result.recipe.label;
-// const recipeUrl = result.recipe.url;
-// const calories = result.recipe.calories;
-
-
-
-
-// $('p.recipeTest').html(`The ${image}`)
-
-// recipeApp.showResults = () => {
-
-//     const recipePromise = recipeApp.getRecipeDetails();
-
-//     recipePromise.then((recipeData) => {
-        
-//         const chosenRecipe = document.querySelector('input[name="ingredients"]:checked')
-//         $('#firstIngredient', '#secondIngredient', '#thirdIngredient').val();
-//     })
-// }
-
-//information needed from API
-// results.forEach(function (item){
-//     const image = item.recipe.image;
-//     const title = item.recipe.label;
-//     const recipeUrl = item.recipe.url;
-//     const calories = item.recipe.calories;
-// })
-
-// //displaying results to webpage
-
-// $('.recipeCard').append(
-//     `<div class="recipeCard"></div>`
-// )
-
-// recipeApp.showResults();
 
 // namespace
 // Recipe API and the URL key
