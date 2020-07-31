@@ -26,7 +26,8 @@ figure {
 }
 
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -44,7 +45,8 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 b, strong {
@@ -138,7 +140,8 @@ fieldset {
 }
 
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -156,7 +159,8 @@ textarea {
 }
 
 [type=checkbox], [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -199,11 +203,13 @@ template {
 }
 
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 .srOnly {
@@ -214,7 +220,8 @@ html {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -236,10 +243,19 @@ html {
 }
 
 .flexColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 90rem;
   padding: 2rem;
   height: 80vh;
@@ -268,9 +284,15 @@ p {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #e5dada;
   color: #2b9348;
   height: 20vh;
@@ -303,15 +325,27 @@ footer {
 
 .button:hover {
   cursor: pointer;
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: -webkit-transform 150ms;
+  transition: -webkit-transform 150ms;
   transition: transform 150ms;
-  box-shadow: 0 3px 3px 0 #2b9348;
+  transition: transform 150ms, -webkit-transform 150ms;
+  -webkit-box-shadow: 0 3px 3px 0 #2b9348;
+          box-shadow: 0 3px 3px 0 #2b9348;
 }
 
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   padding-top: 7rem;
 }
@@ -325,9 +359,15 @@ form {
 }
 
 .flexRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 50%;
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -340,13 +380,30 @@ input {
 }
 
 input:focus {
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: -webkit-transform 150ms;
+  transition: -webkit-transform 150ms;
   transition: transform 150ms;
-  box-shadow: 0 3px 3px 0 crimson;
+  transition: transform 150ms, -webkit-transform 150ms;
+  -webkit-box-shadow: 0 3px 3px 0 crimson;
+          box-shadow: 0 3px 3px 0 crimson;
 }
 
 .formText {
   width: 80%;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  letter-spacing: 0.2em;
+}
+
+input[type="text"]:-ms-input-placeholder {
+  letter-spacing: 0.2em;
+}
+
+input[type="text"]::-ms-input-placeholder {
+  letter-spacing: 0.2em;
 }
 
 input[type="text"]::placeholder {
@@ -356,9 +413,14 @@ input[type="text"]::placeholder {
 .recipeContainer {
   width: 100%;
   padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: red;
 }
 
@@ -367,9 +429,16 @@ input[type="text"]::placeholder {
   background-color: #e5dada;
   margin-bottom: 20px;
   color: #4a473e;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .recipeImg,

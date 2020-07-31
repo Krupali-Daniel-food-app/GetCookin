@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link to styles -->
     <link rel="stylesheet" href="styles/styles.css">
-    <!-- Link to google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Patrick+Hand&display=swap" rel="stylesheet">
 
     <title>Get Cookin'</title>
 </head>
 
 <body>
-    <form>
+    <form action="#">
         <div class="form wrapper">
             <h1>Pick Your Ingredients</h1>
             <div class="flexRow">
                 <div class="formText">
-                    <label for="ingredients" class="srOnly">Enter First Ingredient</label>
-                    <input type=text name="ingredients" id="firstIngredient" placeholder="First Ingredient">
+                    <label for="ingredientsInput" class="srOnly">Enter First Ingredient</label>
+                    <input class="firstIngredient" type=text name="ingredients" id="ingredientsInput" placeholder="First Ingredient">
                 </div>
                 <div class="formText">
                     <label for="ingredients" class="srOnly">Enter Second Ingredient</label>
-                    <input type=text name="ingredients" id="secondIngredient" placeholder="Second Ingredient">
+                    <input class="secondIngredient" type=text name="ingredients" id="secondIngredient" placeholder="Second Ingredient">
                 </div>
                 <div class="formText">
                     <label for="ingredients" class="srOnly">Enter Third Ingredient</label>
-                    <input type=text name="ingredients" id="thirdIngredient" placeholder="Third Ingredient">
+                    <input class="thirdIngredient" type=text name="ingredients" id="thirdIngredient" placeholder="Third Ingredient">
                 </div>
+                <input type="submit" value="search">
             </div>
-            <a class="button">Get Recipe</a>
         </div>
     </form>
+
+
+
+
     <div class="recipeContainer">
-        <!-- Dynamic Content Goes Here -->
-        <div class="recipeCard">
-            <div class="recipeImg"></div>
-            <div class="recipeText"></div>                
-        </div>
+        <div class="result"></div>
     </div>
+    
+    <p class="recipeTest"></p>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="./script/script.js"></script>
 </body>
 
 </html>
