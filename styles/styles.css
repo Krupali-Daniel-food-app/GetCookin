@@ -278,6 +278,7 @@ h1 {
 
 .flexColumn p {
   margin-bottom: 5rem;
+  text-align: center;
 }
 
 p {
@@ -337,6 +338,10 @@ footer {
   transition: transform 150ms, -webkit-transform 150ms;
   -webkit-box-shadow: 0 3px 3px 0 #2b9348;
           box-shadow: 0 3px 3px 0 #2b9348;
+}
+
+.button:focus {
+  border: 2px solid crimson;
 }
 
 .form {
@@ -479,12 +484,34 @@ input[type="submit"]:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  border: 5px solid crimson;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#F90E42), color-stop(#FE495E), color-stop(#FF6A78), color-stop(#FF8792), color-stop(#FDA2AB), color-stop(#FFA9A5), color-stop(#FFB0A1), color-stop(#FFB89F), color-stop(#F9B877), color-stop(#DEBF51), color-stop(#ABCA3A), to(#4FD448));
+  background-image: linear-gradient(to right bottom, #F90E42, #FE495E, #FF6A78, #FF8792, #FDA2AB, #FFA9A5, #FFB0A1, #FFB89F, #F9B877, #DEBF51, #ABCA3A, #4FD448);
+}
+
+.recipeCard:hover,
+.recipeCard:focus {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: -webkit-transform 150ms;
+  transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  transition: transform 150ms, -webkit-transform 150ms;
+  -webkit-box-shadow: 0 3px 3px 0 crimson;
+          box-shadow: 0 3px 3px 0 crimson;
+}
+
+.recipeImg img {
+  border: 3.5px solid gold;
 }
 
 .recipeImg,
@@ -511,5 +538,101 @@ h4 {
 }
 
 .recipeSection {
-  background-color: whitesmoke;
+  background-color: #E5E5E5;
+  margin-bottom: 0;
+}
+
+@media (max-width: 320px) {
+  form {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 375px) {
+  .flexColumn h1 {
+    text-align: center;
+  }
+  .form > * {
+    text-align: center;
+  }
+  .flexRow {
+    margin-top: 0;
+  }
+  .form p {
+    margin-top: 0;
+  }
+  .result {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .recipeCard {
+    width: 100%;
+    position: block;
+  }
+  .recipeImg {
+    width: 100%;
+  }
+  .recipeImg img {
+    width: 80%;
+  }
+  .recipeLink {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .flexColumn h1 {
+    text-align: center;
+  }
+  .form > * {
+    text-align: center;
+  }
+  .flexRow {
+    margin-top: 0;
+  }
+  .form p {
+    margin-top: 0;
+  }
+  .result {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .recipeCard {
+    width: 100%;
+    position: block;
+  }
+  .recipeImg {
+    width: 100%;
+  }
+  .recipeImg img {
+    width: 80%;
+  }
+  .recipeLink {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .recipeImg {
+    width: 100%;
+  }
+  .recipeImg img {
+    width: 80%;
+  }
+  .recipeLink {
+    font-size: 2.3rem;
+  }
+  .recipeText {
+    width: 100%;
+  }
 }

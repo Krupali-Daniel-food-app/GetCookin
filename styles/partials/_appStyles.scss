@@ -78,7 +78,6 @@ input[type="submit"]:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    // background-color: ;
 }
 
 .recipeCard {
@@ -89,8 +88,23 @@ input[type="submit"]:hover {
     color: #4a473e;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+    border: 5px solid crimson;
+    background-image: linear-gradient(to right bottom, #F90E42, #FE495E, #FF6A78, #FF8792, #FDA2AB, #FFA9A5, #FFB0A1, #FFB89F, #F9B877, #DEBF51, #ABCA3A, #4FD448);
+}
+
+.recipeCard:hover,
+.recipeCard:focus {
+    transform: translateY(-2px);
+    transition: transform 150ms;
+    box-shadow: 0 3px 3px 0 crimson;
+}
+
+.recipeImg img {
+    border: 3.5px solid gold;
 }
 
 .recipeImg,
@@ -118,5 +132,6 @@ h4 {
 }
 
 .recipeSection {
-    background-color: whitesmoke;
+    background-color: #E5E5E5;
+    margin-bottom: 0;
 }

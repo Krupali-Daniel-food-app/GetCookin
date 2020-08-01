@@ -28,7 +28,7 @@ recipeApp.displayRecipes = function(data){
                 <img src="${food.recipe.image}">
             </div>
             <div class="recipeText">
-                <a class="recipeLink" href="${food.recipe.url}">${food.recipe.label}</a>
+                <a target="_blank" class="recipeLink" href="${food.recipe.url}">${food.recipe.label}</a>
                 <p class="recipeContent" >Calories: ${Math.round(food.recipe.calories)} kcal</p>
                 <p class="recipeContent">Serves: ${food.recipe.yield}</p>
             </div>
