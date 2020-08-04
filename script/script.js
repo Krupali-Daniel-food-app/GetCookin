@@ -1,8 +1,9 @@
-
+//namespace
 const recipeApp = {};
 
 
-recipeApp.getRecipes = function(query) {
+//make ajax call to request to get recipe
+recipeApp.getRecipes = function (query) {
     $.ajax({
         url: "https://api.edamam.com/search?app_key=ce398087faaa6cb49e91f5c2860b1493&app_id=ae9c0914&",
         method: 'GET',
@@ -13,15 +14,16 @@ recipeApp.getRecipes = function(query) {
             to: 6
         }
 
-    }).then(function(result) {
-        // console.log(result);
+    }).then(function (result) {
         $('.result').empty();
         recipeApp.displayRecipes(result.hits)
     })
 }
 
-recipeApp.displayRecipes = function(data){
-    data.forEach(function(food){
+//make a call to API for users to select ingredients
+//display images, url and info
+recipeApp.displayRecipes = function (data) {
+    data.forEach(function (food) {
         const recipeHtml = `
         <div class="recipeCard">
             <div class="recipeImg">
@@ -34,36 +36,27 @@ recipeApp.displayRecipes = function(data){
             </div>
         </div>`
 
+        //append the results
         $('.result').append(recipeHtml);
     })
 }
 
-$('form').on('submit', function(e){
+//prevent default after the form is submitted
+$('form').on('submit', function (e) {
     e.preventDefault();
     const selection = $('input').val();
     recipeApp.getRecipes(selection);
 })
 
-recipeApp.init = function() {
+//init function
+recipeApp.init = function () {
     recipeApp.getRecipes('');
 }
 
-$(function(){
+//document ready
+$(function () {
     recipeApp.init();
 })
 
 
 
-// namespace
-// Recipe API and the URL key
-// Intialise the init
-// set up the first page at initial load
-// watch for user input in search bar
-// make sure the users select atleast 3 ingredients 
-// retrive data from the api to reflect on the pages
-// get multiple recipes
-// display recipe title, image and link to the recipe
-// function to reset page on the refresh
-// doc ready
-// stretch goals
-// display time to cook recipe and nutritional count on dom for users

@@ -54,6 +54,13 @@ footer {
     background-color: #e5dada;
     color: #2b9348;
     height: 20vh;
+    animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
 }
 
 .footerLink {
